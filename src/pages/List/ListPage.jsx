@@ -43,7 +43,7 @@ export default function ListPage() {
   return (
     <div>
       <h1>Liste des Pokémons</h1>
-      <Card pokemonCard={pokemonList} />
+      <Card className="card" pokemonCard={pokemonList} />
       <LoadMore
         loading={loading}
         setNextPage={() => setNextPage((prevPage) => prevPage + 1)}

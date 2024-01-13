@@ -1,2 +1,15 @@
 @use '@scssVariables' as v;
 
+.app {
+  font-family: v.$global-font;
+  background-color: v.$clr-background-primary;
+  color: v.$clr-text;
+}
+
+.ui {
+  background-color: v.$clr-background-primary;
+}
+
+.card {
+  background-color: v.$clr-background-primary;
+}

@@ -1,1 +1,20 @@
 @use '@scssVariables' as v;
+
+.menu {
+  color: v.$clr-title;
+  background-color: v.$clr-background-header;
+  &__item {
+    background-color: v.$clr-background-header;
+  }
+  &__menu {
+    background-color: v.$clr-background-header;
+  }
+  &__input {
+    background-color: v.$clr-background-header;
+  }
+}
+.header {
+  .ui {
+    background-color: v.$clr-background-header;
+  }
+}

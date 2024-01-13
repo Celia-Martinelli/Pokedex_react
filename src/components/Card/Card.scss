@@ -1,1 +1,18 @@
 @use '@scssVariables' as v;
+
+.card {
+  background-color: v.$clr-background-primary;
+  &__ui {
+    background-color: v.$clr-background-list;
+  }
+  &__img {
+    background-color: v.$clr-background-list;
+  }
+  &__content {
+    background-color: v.$clr-background-list;
+  }
+  &__header {
+    color: v.$clr-text;
+    background-color: v.$clr-background-list;
+  }
+}

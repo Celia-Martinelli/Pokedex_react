@@ -8,10 +8,21 @@ export default function Footer() {
   return (
     <Segment basic>
       <footer className="footer">
-        <a href="https://pokeapi.co/">PokéAPI</a>
-        <a href="https://github.com/celiamartinelli"> GitHub </a>
-        <a href="https://www.linkedin.com/in/celiamartinelli/"> LinkedIn </a>
-        <p className="footer__copyright">Pokédex - Copyright © - {year}</p>
+        <div className="footer__container">
+          <a className="footer__link" href="https://pokeapi.co/">
+            PokéAPI
+          </a>
+          <a className="footer__link" href="https://github.com/celiamartinelli">
+            GitHub
+          </a>
+          <a
+            className="footer__link"
+            href="https://www.linkedin.com/in/celiamartinelli/"
+          >
+            LinkedIn
+          </a>
+          <p className="footer__copyright">Pokédex - Copyright © - {year}</p>
+        </div>
       </footer>
     </Segment>
   );

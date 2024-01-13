@@ -5,17 +5,21 @@ import { NavLink } from 'react-router-dom';
 export default function Header() {
   return (
     <div>
-      <Menu pointing>
-        <MenuItem as={NavLink} to="/">
+      <Menu pointing className="menu">
+        <MenuItem className="menu__item" as={NavLink} to="/">
           Pokédex
         </MenuItem>
 
-        <MenuItem as={NavLink} to="/types">
+        <MenuItem className="menu__item" as={NavLink} to="/types">
           Types
         </MenuItem>
-        <MenuMenu position="right">
-          <MenuItem>
-            <Input icon="search" placeholder="Search..." />
+        <MenuMenu className="menu__menu" position="right">
+          <MenuItem className="menu__item">
+            <Input
+              className="menu__input"
+              icon="search"
+              placeholder="Search..."
+            />
           </MenuItem>
         </MenuMenu>
       </Menu>

@@ -10,14 +10,19 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default function Card({ pokemonCard }) {
   return (
-    <div>
+    <div className="card">
       {pokemonCard.map((pokemon) => (
-        <CardSemanticUi key={uuidv4()}>
+        <CardSemanticUi className="card__ui" key={uuidv4()}>
           {pokemon.sprites && pokemon.sprites.front_default && (
-            <Image src={pokemon.sprites.front_default} wrapped ui={false} />
+            <Image
+              className="card__img"
+              src={pokemon.sprites.front_default}
+              wrapped
+              ui={false}
+            />
           )}
-          <CardContent>
-            <CardHeader>
+          <CardContent className="card__content">
+            <CardHeader className="card__header">
               <span className="number">#{pokemon.order}</span>
               {pokemon.name}
             </CardHeader>
