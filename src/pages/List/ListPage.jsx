@@ -3,8 +3,11 @@ import LoadMore from '@/components/LoadMore/LoadMore';
 import { useEffect, useState } from 'react';
 
 export default function ListPage() {
+  // Liste des détails complets de Pokémon
   const [pokemonList, setPokemonList] = useState([]);
+  // Chargement en attente réponse API
   const [loading, setLoading] = useState(false);
+  // page supplémentaire avec 20 pokemon de plus
   const [nextPage, setNextPage] = useState(1);
 
   useEffect(() => {
@@ -12,7 +15,12 @@ export default function ListPage() {
     fetch(
       `https://pokeapi.co/api/v2/pokemon?offset=${(nextPage - 1) * 20}&limit=20`
     )
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
       .then((data) => {
         console.log(data);
         setPokemonList((prevList) => {

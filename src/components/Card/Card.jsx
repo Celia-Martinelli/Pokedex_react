@@ -12,11 +12,13 @@ export default function Card({ pokemonCard }) {
     <div>
       {pokemonCard.map((pokemon) => (
         <CardSemanticUi key={uuidv4()}>
-          <Image src="" wrapped ui={false} />
+          {pokemon.sprites && pokemon.sprites.front_default && (
+            <Image src={pokemon.sprites.front_default} wrapped ui={false} />
+          )}
           <CardContent>
             <CardHeader>
-              {pokemon.name}
               <span className="number">#{pokemon.order}</span>
+              {pokemon.name}
             </CardHeader>
           </CardContent>
         </CardSemanticUi>
