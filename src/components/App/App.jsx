@@ -6,6 +6,7 @@ import { Container } from 'semantic-ui-react';
 import ListPage from '@/pages/List/ListPage';
 import NotFoundPage from '@/pages/NotFound/NotFoundPage';
 import TypesPokemonPage from '@/pages/TypesPokemon/TypesPokemonPage';
+import CardPokemonPage from '@/pages/CardPokemon/CardPokemonPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<ListPage />} />
+        <Route path="/:id" element={<CardPokemonPage />} />
         <Route path="/types" element={<TypesPokemonPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
