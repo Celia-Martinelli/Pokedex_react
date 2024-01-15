@@ -1,6 +1,7 @@
 import Card from '@/components/Card/Card';
 import LoadMore from '@/components/LoadMore/LoadMore';
 import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function ListPage() {
   // Liste des détails complets de Pokémon
@@ -43,7 +44,15 @@ export default function ListPage() {
   return (
     <div>
       <h1>Liste des Pokémons</h1>
-      <Card className="card" pokemonCard={pokemonList} />
+      <Card
+        className="card"
+        pokemonCard={pokemonList}
+        Onclick={() => {
+          console.log('click');
+        }}
+        as={NavLink}
+        to="/:id"
+      />
       <LoadMore
         loading={loading}
         setNextPage={() => setNextPage((prevPage) => prevPage + 1)}
